@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Merdeka.id — HUT RI ke-81 | Portal Nusantara</title>
+<meta name="description" content="Portofolio interaktif HUT RI ke-81: peta keunikan daerah, galeri destinasi, lini masa sejarah, dan kuis kemerdekaan Indonesia.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============ NOISE / GRID OVERLAY (dekorasi statis, tidak ganggu konten) ============ -->
+<div class="bg-grid" aria-hidden="true"></div>
+<div class="bg-glow" aria-hidden="true"></div>
+
+<!-- ============ PORTAL ENTRANCE ============ -->
+<section id="portal" class="portal">
+  <div class="portal-rays" aria-hidden="true"></div>
+  <div class="portal-stars" aria-hidden="true"></div>
+  <div class="portal-ring r1" aria-hidden="true"></div>
+  <div class="portal-ring r2" aria-hidden="true"></div>
+  <div class="portal-ring r3" aria-hidden="true"></div>
+  <div class="portal-ring r4" aria-hidden="true"></div>
+  <div class="portal-core" aria-hidden="true"></div>
+  <div class="portal-particles" id="portal-particles" aria-hidden="true"></div>
+
+  <div class="portal-content">
+    <span class="portal-eyebrow">DIRGAHAYU REPUBLIK INDONESIA</span>
+    <h1 class="portal-title">
+      <span class="line">MERDEKA</span>
+      <span class="line accent">KE&#8209;81</span>
+    </h1>
+    <p class="portal-sub">Satu portal, seribu cerita Nusantara. Masuk dan jelajahi.</p>
+    <button id="btn-masuk" class="btn-portal" type="button">
+      <span>Masuk ke Portal</span>
+      <i class="arrow" aria-hidden="true"></i>
+    </button>
+  </div>
+
+  <div class="portal-scanline" aria-hidden="true"></div>
+  <div class="portal-flash" id="portal-flash" aria-hidden="true"></div>
+  <div class="portal-shock" id="portal-shock" aria-hidden="true"></div>
+</section>
+
+<!-- ============ NAVBAR ============ -->
+<header class="navbar" id="navbar">
+  <a href="#beranda" class="brand">
+    <span class="brand-mark">🇮🇩</span>
+    <span class="brand-text">Merdeka<span class="accent-text">.id</span></span>
+  </a>
+
+  <nav class="nav-links" id="nav-links">
+    <a href="#beranda">Beranda</a>
+    <a href="#peta">Peta</a>
+    <a href="#galeri">Galeri</a>
+    <a href="#sejarah">Sejarah</a>
+    <a href="#kuis">Kuis</a>
+  </nav>
+
+  <div class="navbar-actions">
+    <button id="btn-musik" class="btn-icon" type="button" aria-label="Putar / jeda musik latar" title="Musik latar">
+      <svg id="icon-musik" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M9 18V5l12-2v13"></path><circle cx="6" cy="18" r="3"></circle><circle cx="18" cy="16" r="3"></circle>
+      </svg>
+    </button>
+    <button id="btn-menu" class="btn-icon nav-toggle" type="button" aria-label="Buka menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="konten">
+
+  <!-- ============ HERO / COUNTDOWN ============ -->
+  <section id="beranda" class="hero">
+    <div class="section-inner hero-inner">
+      <p class="eyebrow">17 AGUSTUS 1945 — 17 AGUSTUS 2027</p>
+      <h1 class="hero-title">
+        Merayakan <span class="accent-text">81 Tahun</span><br>
+        Semangat Merdeka
+      </h1>
+      <p class="hero-desc">
+        Jelajahi arsip digital kemerdekaan Indonesia — dari keunikan tiap penjuru Nusantara,
+        keajaiban warisan dunia, hingga jejak sejarah yang membentuk bangsa ini.
+      </p>
+
+      <div class="countdown-box" aria-live="polite">
+        <p class="countdown-label">Hitung mundur menuju HUT RI ke&#8209;82</p>
+        <div class="countdown-grid">
+          <div class="cd-unit"><span id="cd-hari" class="cd-num">00</span><span class="cd-label">Hari</span></div>
+          <div class="cd-sep">:</div>
+          <div class="cd-unit"><span id="cd-jam" class="cd-num">00</span><span class="cd-label">Jam</span></div>
+          <div class="cd-sep">:</div>
+          <div class="cd-unit"><span id="cd-menit" class="cd-num">00</span><span class="cd-label">Menit</span></div>
+          <div class="cd-sep">:</div>
+          <div class="cd-unit"><span id="cd-detik" class="cd-num">00</span><span class="cd-label">Detik</span></div>
+        </div>
+      </div>
+
+      <div class="hero-cta">
+        <a href="#peta" class="btn-primary">Jelajahi Nusantara</a>
+        <a href="#kuis" class="btn-ghost">Uji Wawasanmu</a>
+      </div>
+    </div>
+    <div class="hero-scroll" aria-hidden="true"><span></span> Gulir</div>
+  </section>
+
+  <!-- ============ PETA NUSANTARA ============ -->
+  <section id="peta" class="section peta-section">
+    <div class="section-inner">
+      <p class="eyebrow">01 &mdash; Ragam Nusantara</p>
+      <h2 class="section-title">Setiap Daerah, Satu Keunikan</h2>
+      <p class="section-desc">Klik penanda pada peta untuk menyingkap ciri khas tiap wilayah Indonesia.</p>
+
+      <div class="peta-layout">
+        <div class="peta-stage" id="peta-stage">
+          <div class="peta-outline" aria-hidden="true"></div>
+          <!-- hotspot dirender oleh JS dari DATA_PETA -->
+        </div>
+
+        <div class="peta-panel" id="peta-panel">
+          <div class="peta-panel-empty">
+            <span class="peta-panel-icon">🗺️</span>
+            <p>Pilih salah satu titik pada peta untuk melihat keunikannya.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ GALERI ============ -->
+  <section id="galeri" class="section galeri-section">
+    <div class="section-inner">
+      <p class="eyebrow">02 &mdash; Warisan &amp; Keajaiban</p>
+      <h2 class="section-title">Galeri Indonesia</h2>
+      <p class="section-desc">Candi, pulau, dan lanskap yang menjadikan Indonesia dikenal dunia.</p>
+
+      <div class="galeri-grid" id="galeri-grid">
+        <!-- kartu dirender oleh JS dari DATA_GALERI -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SEJARAH / TIMELINE ============ -->
+  <section id="sejarah" class="section sejarah-section">
+    <div class="section-inner">
+      <p class="eyebrow">03 &mdash; Jejak Waktu</p>
+      <h2 class="section-title">Rekaman Sejarah Bangsa</h2>
+      <p class="section-desc">Lini masa peristiwa penting, dari kebangkitan nasional menuju Indonesia Emas.</p>
+
+      <div class="timeline" id="timeline">
+        <!-- item dirender oleh JS dari DATA_SEJARAH -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ KUIS ============ -->
+  <section id="kuis" class="section kuis-section">
+    <div class="section-inner">
+      <p class="eyebrow">04 &mdash; Uji Wawasan</p>
+      <h2 class="section-title">Kuis Sejarah Kemerdekaan</h2>
+      <p class="section-desc">Jawab secepat mungkin, kumpulkan skor tertinggi sebelum waktu habis.</p>
+
+      <div class="kuis-card" id="kuis-card">
+
+        <!-- layar mulai -->
+        <div class="kuis-screen" id="kuis-start">
+          <span class="kuis-badge">🎯 Mode Cepat Tepat</span>
+          <h3>Siap Menguji Wawasan Kebangsaanmu?</h3>
+          <p><span id="kuis-jumlah-soal">12</span> soal seputar sejarah kemerdekaan Indonesia. Tiap soal punya batas waktu 15 detik!</p>
+          <button class="btn-primary" id="btn-mulai-kuis" type="button">Mulai Kuis</button>
+        </div>
+
+        <!-- layar soal -->
+        <div class="kuis-screen hidden" id="kuis-main">
+          <div class="kuis-hud">
+            <span id="kuis-progress-text">Soal 1 / 12</span>
+            <span class="kuis-timer" id="kuis-timer">15</span>
+            <span id="kuis-skor-text">Skor: 0</span>
+          </div>
+          <div class="kuis-progressbar"><div class="kuis-progressbar-fill" id="kuis-progressbar-fill"></div></div>
+
+          <h3 class="kuis-soal" id="kuis-soal-text">Pertanyaan...</h3>
+          <div class="kuis-opsi" id="kuis-opsi"></div>
+        </div>
+
+        <!-- layar hasil -->
+        <div class="kuis-screen hidden" id="kuis-result">
+          <span class="kuis-badge" id="kuis-result-badge">🏆 Hasil Akhir</span>
+          <h3 id="kuis-result-title">Kerja Bagus!</h3>
+          <p id="kuis-result-desc">Kamu menjawab benar sekian dari sekian soal.</p>
+          <div class="kuis-result-score" id="kuis-result-score">0 / 12</div>
+          <button class="btn-primary" id="btn-ulangi-kuis" type="button">Coba Lagi</button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="section-inner footer-inner">
+      <div class="footer-brand">
+        <span class="brand-mark">🇮🇩</span>
+        <span class="brand-text">Merdeka<span class="accent-text">.id</span></span>
+      </div>
+      <p class="footer-line">Dibuat dengan semangat merah putih — Dirgahayu Republik Indonesia ke&#8209;81.</p>
+      <p class="footer-credit">Portofolio sekolah &middot; HTML, CSS &amp; JavaScript</p>
+    </div>
+  </footer>
+
+</main>
+
+<!-- ============ MODAL GALERI ============ -->
+<div class="modal-backdrop" id="modal-backdrop">
+  <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <button class="modal-close" id="modal-close" type="button" aria-label="Tutup">&times;</button>
+    <div class="modal-media" id="modal-media"></div>
+    <div class="modal-body">
+      <p class="modal-lokasi" id="modal-lokasi"></p>
+      <h3 id="modal-title"></h3>
+      <p id="modal-desc"></p>
+    </div>
+  </div>
+</div>
+
+<!-- ============ SLOT MUSIK RESMI (Spotify/YouTube) — muncul jika dikonfigurasi ============ -->
+<div id="musik-embed-slot" class="musik-embed-slot"></div>
+
+<!-- ============ AUDIO LATAR LOKAL (fallback jika embed tidak dikonfigurasi) ============ -->
+<audio id="audio-latar" loop preload="none">
+  <source src="tanah-airku.mp3" type="audio/mpeg">
+</audio>
+
+<button id="btn-top" class="btn-top" type="button" aria-label="Kembali ke atas">&uarr;</button>
+
+<script src="data.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
